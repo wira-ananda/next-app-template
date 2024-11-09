@@ -1,21 +1,146 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* @import "bootstrap/scss/bootstrap"; */
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* app/globals.css */
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Menghilangkan scrollbar untuk WebKit (Chrome, Safari) */
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* Untuk Internet Explorer dan Edge */
+  scrollbar-width: none; /* Untuk Firefox */
+}
+
+* {
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  text-decoration: none;
+  border: none;
+}
+
+html {
+  font-size: 10px;
+  background-color: #d6d6d6;
+}
+
+html::-webkit-scrollbar {
+  width: 6px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #212224;
+}
+
+html::-webkit-scrollbar-track {
+  background: #eaeaea;
+}
+
+.text-shadow-yellow {
+  text-shadow: 2px 2px 4px #FEF600;
+}
+.text-shadow-black {
+  text-shadow: 2px 2px 4px #000;
+}
+.text-shadow-white {
+  text-shadow: 2px 2px 4px #fff;
+}
+
+.hover\:text-shadow-yellow:hover {
+  text-shadow: 2px 2px 6px #FEF600; /* Bayangan kuning saat hover */
+}
+.hover\:text-shadow-black:hover {
+  text-shadow: 2px 2px 6px #000000; /* Bayangan kuning saat hover */
+}
+.hover\:text-shadow-white:hover {
+  text-shadow: 2px 2px 6px #fff; /* Bayangan kuning saat hover */
+}
+
+#efekKaca {
+  border-radius: 10px;
+  background: #000000a8;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.70);
+  backdrop-filter: blur(10px);
+}
+
+#gradient {
+  background: rgb(234,234,234);
+  background: linear-gradient(180deg, rgba(234,234,234,0) 0%, rgba(234,234,234,1) 35%, rgba(234,234,234,1) 100%);
+}
+
+#headnav {
+  /* border-radius: 15px; */
+  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.2);
+}
+
+#NavHover {
+  transition: .2s;
+}
+
+#waterMark {
+  background: linear-gradient(92.11deg, #00ffe1 30%, #1f1f1f 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+#textGradient{
+  background: linear-gradient(90deg,  #FF6B6B 30%, #313131 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 30px #000;
+}
+#textGradient2{
+  background: linear-gradient(90deg,   #2B2D42 40%, #F8F4EF 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 30px #000;
+}
+#textGradient3{
+  background: linear-gradient(90deg,  #FF6B6B 30%, #F8F4EF 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.video-container {
+  border-radius: 0px 0px 7px 7px; /* Sudut melengkung (opsional) */
+  overflow: hidden; /* Mencegah konten melampaui batas */
+}
+
+
+@media screen and (max-width: 639px) {
+  html {
+    font-size: 6px;
   }
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@media screen and (min-width: 640px) and (max-width: 768px) {
+  html {
+    font-size: 9px;
+  }
+  header img {
+    margin-left: 0.5rem;
+  }
+  header div section#logo {
+    display: flex;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1280px) {
+  html {
+    font-size: 8.5px;
+  }
+}
+@media screen and (min-width: 1279px) and (max-width: 1536px) {
+  html {
+    font-size: 10px;
+  }
 }
